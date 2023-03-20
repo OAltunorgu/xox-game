@@ -1,13 +1,16 @@
 <h1>XoX Game</h1>
 <h2 class="alert alert-warning text-center">{{ message }}</h2>
-<button (click)="newGame()" class="btn btn-primary w-100 mt-4">Yeni Oyun</button>
+<button (click)="newGame()" class="btn btn-primary w-100 mt-4">
+  Yeni Oyun
+</button>
 <div class="row mt-2">
-  <div (click)="setMark(index)"
-    class="col-md-4 text-center text-warning"
+  <div
+    (click)="setMark(index)"
+    class="col-md-4 col-4 text-center text-warning"
     *ngFor="let game of games; let index = index"
-    style="border: 1px solid #ccc; height: 150px; cursor: pointer;"
+    style="border: 1px solid #ccc; height: 150px; cursor: pointer; flex-wrap: wrap;"
   >
-    <span class="text-center" style="font-size: 80px;">{{ game }}</span>
+    <span class="text-center" style="font-size: 80px">{{ game }}</span>
   </div>
 </div>
-<hr>
+<hr />
